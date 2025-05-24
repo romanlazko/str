@@ -1,0 +1,27 @@
+{
+    "name": "romanlazko/str",
+    "description": "String helper functions.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Roman Lazko",
+        "email": "romanlazko@gmail.com",
+        "homepage": "https://github.com/romanlazko"
+      }
+    ],
+    "autoload": {
+      "psr-4": {
+        "RomanLazko\\Str\\": "src/"
+      },
+      "files": [
+        "src/str_helper.php"
+      ]
+    },
+    "require": {
+      "php": ">=8.0",
+      "romanlazko/support-macroable": "dev-master"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
