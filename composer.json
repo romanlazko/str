@@ -22,6 +22,6 @@
       "php": ">=8.0",
       "romanlazko/support-macroable": "dev-master"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
