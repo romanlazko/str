@@ -20,7 +20,7 @@
     },
     "require": {
       "php": ">=8.0",
-      "romanlazko/support-macroable": "dev-master"
+      "romanlazko/support-macroable": ">=1.0"
     },
     "minimum-stability": "stable",
     "prefer-stable": true
