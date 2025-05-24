@@ -1,39 +1,10 @@
 <?php
 
-use RomanLazko\Str\Str;
-use Stringable;
+use RomanLazko\Str\StringProxy;
 
 if (! function_exists('str')) {
-    /**
-     * Get a new stringable object from the given string.
-     *
-     * @param  string|null  $string
-     * @return object
-     */
-    function str($string = null)
+    function str($string = null): \Stringable
     {
-        return new class($string) implements Stringable
-        {
-            public function __construct(public string $string)
-            {
-            }
-
-            public function __call($method, $parameters): self
-            {
-                $this->string = Str::$method($this->string, ...$parameters);
-
-                return $this;
-            }
-
-            public function toString(): string
-            {
-                return $this->string;
-            }
-
-            public function __toString(): string
-            {
-                return $this->toString();
-            }
-        };
+        return new StringProxy($string ?? '');
     }
 }
